@@ -1,8 +1,10 @@
 import turtle
+from turtle import TK
+
 
 class CControlPanel:
     def __init__(self):
-        from turtle import TK
+
         # get a handle to the master container of the canvas
         tk_hndl = TK.Tk()
         frame = TK.Frame()
@@ -28,12 +30,17 @@ class CControlPanel:
 
         text_for_display = (
             "Click on cells to toggle them.",
+            " ",
             "Options:",
             "E - Erase the board",
             "F - Fill up the board completely",
             "R - Generate a random world",
-            "S - Go to next step",
-            "C - Run continuously",
+            "S - Go to next step  (manual mode / stop auto mode)",
+            "C - Run continuously (auto mode)",
+            " ",
+            "A - Increase simulation speed",
+            "Z - Decrease simulation speed",
+            " ",
             "Q - Quit Game"
         )
 
