@@ -1,7 +1,7 @@
 #!/usr/bin/python
-# Conway's Game of Life Simulation v1.0 (python 3)
+# Conway's Game of Life Simulation v1.2 (python 3 - OpenGL renderer version)
 # Entry point
-#
+# Requires PyOpenGl module
 # Copyright (C) 2015  Taner Selim <tanerius@gmail.com>
 
 """
@@ -15,7 +15,7 @@
 import argparse
 import turtle
 from gamepanel.gamepanel import CControlPanel
-from gameworld.gameworld import CWorld
+from gameworld.gameworld_gl import CWorldGl
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
@@ -32,9 +32,7 @@ if __name__ == '__main__':
     # Make a control pane
     control_pane = CControlPanel()
     # Make a world
-    world = CWorld(args.xsize, args.ysize)
-    # Fill it randomly
-    world.fill_board_randomly()
+    world = CWorldGl(args.xsize, args.ysize)
 
     # Start the main loop
     turtle.listen()
