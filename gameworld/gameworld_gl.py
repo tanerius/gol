@@ -208,3 +208,4 @@ class CWorldGl:
                 self.world_state.remove(cell)
             else:
                 self.world_state.add(cell)
+
